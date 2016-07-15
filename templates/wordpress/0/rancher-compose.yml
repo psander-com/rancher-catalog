@@ -1,0 +1,30 @@
+.catalog:
+  name: "Wordpress"
+  version: "v0.1-psander"
+  description: "Blog tool, publishing platform and CMS"
+  uuid: Wordpress-0
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: public_port
+      description: "public port to access the wordpress site"
+      label: "Public Port"
+      required: true
+      default: "80"
+      type: "int"
+    - variable: mysql_user_password
+      description: "user password for database"
+      label: "DB User Password"
+      required: true
+      type: string
+    - variable: mysql_root_password
+      description: "root password for database"
+      label: "DB Root Password"
+      required: true
+      type: string      
+    - variable: backup_path
+      description: "local path to backups"
+      label: "Backup Path"
+      required: true
+      type: string
+      
+wordpress:

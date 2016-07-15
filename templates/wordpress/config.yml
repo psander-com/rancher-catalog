@@ -1,0 +1,5 @@
+name: Wordpress
+description: |
+  Blog tool, publishing platform and CMS (including backup container) How to use this solution? Please read here https://hub.docker.com/r/aveltens/wordpress-backup/
+version: v0.1-psander
+category: Blogging

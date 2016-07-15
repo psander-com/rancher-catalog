@@ -1,0 +1,68 @@
+.catalog:
+  name: "Ghost"
+  version: "v0.1-psander"
+  description: "Blog powered by Ghost. Requires no database"
+  uuid: ghost-0
+  minimum_rancher_version: v0.51.0
+  questions:
+    - variable: public_port
+      description: "public port to access the blog"
+      label: "Public Port"
+      required: true
+      default: "80"
+      type: "int"
+    - variable: ghost_content
+      description: "overwrite the default content config"
+      label: "Content Path"
+      required: false
+      type: string
+    - variable: ghost_url
+      description: "http://example.com"
+      label: "Ghost URL"
+      required: true
+      type: string
+    - variable: ghost_admin_ssl
+      description: "Force admin to use ssl"
+      label: "Admin SSL"
+      required: false
+      default: false
+      type: enum
+      options:
+        - true
+        - false
+    - variable: mail_from
+      description: "\"Webmaster\" <webmaster@example.com>"
+      label: "Mail From"
+      required: false
+      type: string
+    - variable: mail_host
+      description: "mail.example.com"
+      label: "Mail Host"
+      required: false
+      type: string
+    - variable: mail_ssl
+      description: "Use SSL for Mail"
+      label: "SSL mail"
+      required: false
+      default: false
+      type: enum
+      options:
+        - true
+        - false
+    - variable: mail_port
+      description: ""
+      label: "Mail Port"
+      required: false
+      type: "int"
+    - variable: mail_username
+      description: "ghost@example.com"
+      label: "Mail Username"
+      required: false
+      type: string
+    - variable: mail_password
+      description: "Your secure password"
+      label: "Mail Password"
+      required: false
+      type: string
+
+ghost:

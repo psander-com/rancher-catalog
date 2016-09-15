@@ -5,12 +5,11 @@
   uuid: Wordpress-0
   minimum_rancher_version: v0.51.0
   questions:    
-    - variable: public_port
-      description: "public port to access the wordpress site"
-      label: "Public Port"
+    - variable: public_host_port
+      description: "e.g. 80 or 1.2.3.4:80"
+      label: "Public Host [IP:]Port"
       required: true
-      default: "80"
-      type: "int"
+      type: string
     - variable: mysql_user_password
       description: "user password for database"
       label: "DB User Password"

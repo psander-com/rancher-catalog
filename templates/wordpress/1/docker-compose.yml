@@ -3,7 +3,7 @@ wordpress:
   links:
     - db:mysql
   ports:
-    - ${public_port}:80
+    - ${public_host_port}:80
   environment:
     WORDPRESS_DB_NAME: "wordpress"
     WORDPRESS_DB_USER: "wordpress"
